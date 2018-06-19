@@ -27,22 +27,39 @@ Most of the features implemented here are borrowed from Zhang and Nivre (Transit
 Following are the feature names x importance factor, and their description. The feature importance factors are tuned for the max accuracy.
 
 Single Word Features:
+
 a) BUF_EDGE_FPOS x 1.5: Head of the buffer Fine POS (single word) : Not from the article.
+
 b) ST_EDGE_FPOS x 1.0: Top of stack Fine POS (Single word) : Not from the article.
+
 c) ST_TOP_WPOS x 1.0: Top of the stack coarse POS and word : From the article.
+
 d) BUF_EDGE_POS x 1.0: Head of the buffer coarse POS (single word) : From part 2
+
 Two Word Features
+
 e) TOP_PAIR_W x 1.0: pair of words at top of stack and head of the buffer : From part 2
+
 f) TOP_PAIR_POS x 1.0: pair of coarse POS at top of stack and head of buffer : From part 2
+
 g) TOP_PAIR_FPOS x 1.0: Top of the stack and buffer head pair using their Fine POS : Not from the article.
+
 h) TOP_PAIR_WPOS x 1.5: Top of the stack (word and coarse POS) and head of buffer (word and coarse POS) pair : From the article. 
+
 i) TOP_PAIR_WPOS2 x 1.0: Top of the stack (word and coarse POS) and head of buffer (word) pair : From the article. 
+
 j) TOP_PAIR_WPOS3 x 1.0: Top of the stack (word) and head of buffer (word and coarse POS) pair : From the article. 
+
 k) TOP_PAIR_WPOS4 x 1.0: Top of the stack (word and coarse POS) and head of buffer (coarse POS) pair : From the article. 
+
 l) TOP_PAIR_WPOS5 x 1.0: Top of the stack (coarse POS) and head of buffer (word and coarse POS) pair : From the article. 
+
 m) TOP_PAIR_BUFF_POS x 1.0 : 1st and 2nd head of buffer coarse POS (buffer[0] and buffer[1]) : From the article.
+
 Three Word Features
+
 n) TOP_TRIPLE_WPOS x 1.0: coarse POS of the 3 words: 1 on the top of stack and 2 are the 1st and 2nd head of buffer (stack[-1], buffer[0], and buffer[1]) : From the article.
+
 o) TOP_TRIPLE_WPOS_head x 1.5: course POS of the 3 words: 1) head of the top of the stack, 2) top of the stack, and 3) head of buffer ( POS(stack[-1].head), stack[-1], buffer[0]) : From the article.
 
 Effect:
